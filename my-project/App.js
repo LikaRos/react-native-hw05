@@ -1,4 +1,5 @@
 import { useRoute } from "./router";
+import { Camera, CameraType } from "expo-camera";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
