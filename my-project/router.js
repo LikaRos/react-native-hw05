@@ -40,7 +40,11 @@ export const useRoute = (isAuth) => {
     );
   }
   return (
-    <MainTab.Navigator tabBarOptions={{ showLabel: false }}>
+    <MainTab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+      }}
+    >
       <MainTab.Screen
         options={{
           headerShown: false,
@@ -50,7 +54,7 @@ export const useRoute = (isAuth) => {
         }}
         name="CreatePosts"
         component={CreatePostsScreen}
-      ></MainTab.Screen>
+      />
       <MainTab.Screen
         options={{
           headerShown: false,
@@ -60,7 +64,7 @@ export const useRoute = (isAuth) => {
         }}
         name="Posts"
         component={PostsScreen}
-      ></MainTab.Screen>
+      />
       {/* <MainTab.Screen
         options={{
           headerShown: false,
@@ -77,7 +81,7 @@ export const useRoute = (isAuth) => {
         }}
         name="Profile"
         component={ProfileScreen}
-      ></MainTab.Screen>
+      />
     </MainTab.Navigator>
   );
 };
